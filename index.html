@@ -11,24 +11,24 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rng.my.id/">
+    <meta property="og:url" content="https://www.rng.my.id">
     <meta property="og:title" content="PT Rasyifa Nusantara Group - Konsultan Lingkungan & Perizinan Profesional">
     <meta property="og:description" content="Solusi lengkap perizinan lingkungan, kehutanan, dan pertambangan. Mengubah yang rumit menjadi sederhana secara amanah.">
-    <meta property="og:image" content="https://rng.my.id/img/img-2.jpg">
+    <meta property="og:image" content="https://www.rng.my.id/img/img-2.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://rng.my.id/">
+    <meta property="twitter:url" content="https://www.rng.my.id/">
     <meta property="twitter:title" content="PT Rasyifa Nusantara Group - Konsultan Lingkungan & Perizinan Profesional">
     <meta property="twitter:description" content="Solusi lengkap perizinan lingkungan, kehutanan, dan pertambangan di Indonesia.">
-    <meta property="twitter:image" content="https://rng.my.id/img/img-2.jpg">
+    <meta property="twitter:image" content="https://www.rng.my.id/img/img-2.jpg">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.rasyifanusantaragroup.com/">
+    <link rel="canonical" href="https://www.rng.my.id/">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="img/icon.png">
-    <link rel="apple-touch-icon" href="img/icon.png">
+    <link rel="icon" type="image/png" href="https://rng.my.id/img/icon.png">
+    <link rel="apple-touch-icon" href="https://rng.my.idimg/icon.png">
 
     <!-- Structured Data / Schema Markup -->
     <script type="application/ld+json">
@@ -36,7 +36,7 @@
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "PT Rasyifa Nusantara Group",
-      "image": "https://rng.my.id/img/logo.webp",
+      "image": "https://rng.my.id.com/img/logo.webp",
       "description": "Konsultan profesional untuk perizinan lingkungan, kehutanan, dan pertambangan di Indonesia",
       "address": {
         "@type": "PostalAddress",
@@ -123,7 +123,7 @@
             background-color: #f0fdf4;
         }
         .hero-bg {
-            background-image: linear-gradient(to top, rgba(5, 46, 22, 0.9), rgba(5, 46, 22, 0.3)), url('img/hero-bg.jpg');
+            background-image: linear-gradient(to top, rgba(5, 46, 22, 0.9), rgba(5, 46, 22, 0.3)), url('https://rng.my.id/img/hero-bg.jpg');
             background-size: cover;
             background-position: center;
             min-height: 80vh;
@@ -194,107 +194,125 @@
             color: #fff;
         }
         
-        /* [BARU] Efek untuk Slogan */
         @keyframes pulse-glow {
-          0% {
-            text-shadow: 0 0 5px rgba(110, 231, 183, 0.6);
-          }
-          50% {
-            text-shadow: 0 0 14px rgba(110, 231, 183, 1);
-          }
-          100% {
-            text-shadow: 0 0 5px rgba(110, 231, 183, 0.6);
-          }
+          0% { text-shadow: 0 0 5px rgba(110, 231, 183, 0.6); }
+          50% { text-shadow: 0 0 14px rgba(110, 231, 183, 1); }
+          100% { text-shadow: 0 0 5px rgba(110, 231, 183, 0.6); }
         }
         .slogan-highlight {
-          color: #6ee7b7; /* Warna hijau terang yang kontras */
+          color: #6ee7b7;
           font-weight: 600;
           animation: pulse-glow 3s infinite ease-in-out;
         }
-        /* [AKHIR BARU] */
 
-        /* Gallery Slider Styles */
         .gallery-slider {
             position: relative;
             margin: 30px 0;
         }
-        .gallery-slider .slick-slide {
-            padding: 0 8px;
-        }
-        .gallery-slider .slick-prev,
-        .gallery-slider .slick-next {
+        .gallery-slider .slick-slide { padding: 0 8px; }
+        .gallery-slider .slick-prev, .gallery-slider .slick-next {
             width: 40px;
             height: 40px;
             z-index: 1;
             background-color: rgba(5, 150, 105, 0.8);
             border-radius: 50%;
         }
-        .gallery-slider .slick-prev:hover,
-        .gallery-slider .slick-next:hover {
+        .gallery-slider .slick-prev:hover, .gallery-slider .slick-next:hover {
             background-color: var(--bs-primary);
         }
-        .gallery-slider .slick-prev {
-            left: 15px;
-        }
-        .gallery-slider .slick-next {
-            right: 15px;
-        }
-        .gallery-slider .slick-prev:before,
-        .gallery-slider .slick-next:before {
+        .gallery-slider .slick-prev { left: 15px; }
+        .gallery-slider .slick-next { right: 15px; }
+        .gallery-slider .slick-prev:before, .gallery-slider .slick-next:before {
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
             font-size: 20px;
             color: white;
         }
-        .gallery-slider .slick-prev:before {
-            content: "\f053";
-        }
-        .gallery-slider .slick-next:before {
-            content: "\f054";
-        }
-        .gallery-slider .slick-dots {
-            bottom: -30px;
-        }
-        .gallery-slider .slick-dots li button:before {
-            font-size: 10px;
-            color: var(--bs-primary);
-        }
-        .gallery-slider .slick-dots li.slick-active button:before {
-            color: var(--bs-primary);
+        .gallery-slider .slick-prev:before { content: "\f053"; }
+        .gallery-slider .slick-next:before { content: "\f054"; }
+        .gallery-slider .slick-dots { bottom: -30px; }
+        .gallery-slider .slick-dots li button:before { font-size: 10px; color: var(--bs-primary); }
+        .gallery-slider .slick-dots li.slick-active button:before { color: var(--bs-primary); }
+
+        .modal-gallery .modal-dialog { max-width: 90%; max-height: 90vh; }
+        .modal-gallery .modal-content { background: transparent; border: none; }
+        .modal-gallery .modal-body { padding: 0; text-align: center; }
+        .modal-gallery img { max-height: 80vh; width: auto; max-width: 100%; }
+        .modal-gallery .btn-close { position: absolute; right: 15px; top: 15px; background: rgba(255,255,255,0.8); opacity: 1; z-index: 10; }
+        .gallery-item { transition: transform 0.3s ease; }
+        .gallery-item:hover { transform: scale(1.02); }
+
+        /* [BARU] Print Styles */
+        @media print {
+            body {
+                font-size: 12pt;
+            }
+            .btn-print-hide, #mainNavbar, footer, .floating-whatsapp-btn, #cta, .hero-bg .d-flex.gap-3,
+            .gallery-slider .slick-arrow, .nav-tabs, #gallery .d-flex.justify-content-center,
+            .gallery-slider .slick-dots {
+                display: none !important;
+            }
+            .hero-bg {
+                background-image: none !important;
+                background-color: #fff !important;
+                color: #000 !important;
+                min-height: auto;
+                padding: 2rem 0 !important;
+            }
+            .hero-bg .text-white, .slogan-highlight {
+                 color: #000 !important;
+                 text-shadow: none !important;
+                 animation: none !important;
+            }
+            section {
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
+                page-break-inside: avoid;
+            }
+            .bg-light-green, .bg-white {
+                background-color: #fff !important;
+            }
+            .text-secondary {
+                color: #000 !important;
+            }
+            .testimonial-card {
+                border-left: 2px solid #ccc;
+                page-break-inside: avoid;
+            }
+            a {
+                text-decoration: none !important;
+                color: inherit !important;
+            }
+            a[href]::after {
+                /* Mencegah URL ditampilkan setelah link */
+                content: "" !important;
+            }
+            .shadow-sm, .shadow-lg {
+                box-shadow: none !important;
+            }
+            .tab-pane.fade.show.active {
+                display: block !important;
+                opacity: 1 !important;
+            }
+            .tab-content > .tab-pane {
+                 display: block !important;
+                 opacity: 1 !important;
+            }
+            img, .gallery-item {
+                max-width: 100% !important;
+                page-break-inside: avoid;
+            }
+             .gallery-slider .slick-track {
+                display: flex;
+                flex-wrap: wrap;
+                transform: none !important;
+            }
+            .gallery-slider .slick-slide {
+                width: 33% !important;
+                margin-bottom: 1rem;
+            }
         }
 
-        /* Modal Gallery Styles */
-        .modal-gallery .modal-dialog {
-            max-width: 90%;
-            max-height: 90vh;
-        }
-        .modal-gallery .modal-content {
-            background: transparent;
-            border: none;
-        }
-        .modal-gallery .modal-body {
-            padding: 0;
-            text-align: center;
-        }
-        .modal-gallery img {
-            max-height: 80vh;
-            width: auto;
-            max-width: 100%;
-        }
-        .modal-gallery .btn-close {
-            position: absolute;
-            right: 15px;
-            top: 15px;
-            background: rgba(255,255,255,0.8);
-            opacity: 1;
-            z-index: 10;
-        }
-        .gallery-item {
-            transition: transform 0.3s ease;
-        }
-        .gallery-item:hover {
-            transform: scale(1.02);
-        }
     </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#mainNavbar">
@@ -302,7 +320,7 @@
     <!-- Header -->
     <nav id="mainNavbar" class="navbar navbar-expand-lg bg-white bg-opacity-90 backdrop-blur sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="/">
+            <a class="navbar-brand d-flex align-items-center" href="#">
                 <img src="https://rng.my.id/img/logo.webp" alt="Logo RNG" style="height: 48px; border-radius: 50%;" class="me-2" onerror="this.onerror=null;this.src='https://placehold.co/48x48/065F46/FFFFFF?text=RNG';" loading="lazy">
                 <span class="fw-bold fs-5 text-secondary">Rasyifa Nusantara Group</span>
             </a>
@@ -331,9 +349,8 @@
                         <span class="title-underline">PT. RASYIFA NUSANTARA GROUP</span>
                     </p>
                     <h1 class="h2 fw-normal mt-4" data-aos="fade-up" data-aos-delay="200">Menjembatani Pembangunan Ekonomi dan Kelestarian Lingkungan</h1>
-                    <!-- [PERUBAHAN] Slogan dibuat lebih menonjol -->
                     <p class="lead fs-5 mt-3 mb-4" data-aos="fade-up" data-aos-delay="300">Dengan slogan "<span class="slogan-highlight">Jembatan Antara Kompleksitas menjadi Kesederhanaan, dengan Kepercayaan sebagai Landasan.</span>", kami menyediakan solusi konsultasi dan perizinan yang handal dan terpercaya.</p>
-                    <div class="d-flex justify-content-center flex-wrap gap-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="d-flex justify-content-center flex-wrap gap-3 btn-print-hide" data-aos="fade-up" data-aos-delay="400">
                         <a href="#services" class="btn btn-light btn-lg fw-bold px-4">Jelajahi Layanan</a>
                         <a href="#contact" class="btn btn-outline-light btn-lg fw-bold px-4">Konsultasi Sekarang</a>
                     </div>
@@ -346,14 +363,18 @@
             <div class="container py-5">
                 <div class="row align-items-center g-5">
                     <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800">
-                        <img src="img/about.me.jpg" alt="Tim Rasyifa Group sedang berdiskusi di lokasi proyek" class="img-fluid rounded-3 shadow-lg" loading="lazy">
+                        <img src="https://rng.my.id/img/img/about.me.jpg" alt="Tim Rasyifa Group sedang berdiskusi di lokasi proyek" class="img-fluid rounded-3 shadow-lg" loading="lazy">
                     </div>
                     <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800">
                         <p class="section-kicker">TENTANG KAMI</p>
                         <h2 class="h1 fw-bold text-secondary">Mitra Profesional untuk Pembangunan Berkelanjutan</h2>
                         <p class="fs-5 mt-3">PT. RASYIFA NUSANTARA GROUP dibentuk dengan tekad kuat untuk menjembatani antara pengembang ekonomi, baik di tingkat tapak maupun nasional, dengan kelestarian lingkungan.</p>
                         <p class="mt-3">Kami menyajikan pelayanan konsultasi lingkungan, kehutanan, pertanian, dan ketahanan pangan yang melibatkan pemahaman mendalam akan dampak aktivitas manusia terhadap alam.</p>
-                        <a href="assets/rng.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary fw-bold mt-3"><i class="fa-solid fa-download me-2"></i>Unduh Profil Perusahaan (PDF)</a>
+                        <!-- [PERUBAHAN] Menambahkan tombol cetak -->
+                        <div class="mt-4">
+                            <a href="assets/rng.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary fw-bold btn-print-hide"><i class="fa-solid fa-download me-2"></i>Unduh Profil (PDF)</a>
+                            <button onclick="window.print()" class="btn btn-outline-secondary fw-bold btn-print-hide"><i class="fa-solid fa-print me-2"></i>Cetak Halaman</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -465,23 +486,23 @@
                 <!-- Grid Gallery -->
                 <div class="row g-4 mb-5">
                     <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img/gallery-1.jpg">
-                            <img src="img/gallery-1.jpg" class="img-fluid w-100" alt="Tim konsultan Rasyifa Group melakukan survei lapangan" loading="lazy">
+                        <a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/gallery-1.jpg">
+                            <img src="https://rng.my.id/img/gallery-1.jpg" class="img-fluid w-100" alt="Tim konsultan Rasyifa Group melakukan survei lapangan" loading="lazy">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img/gallery-2.jpg">
+                        <a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/gallery-2.jpg">
                             <img src="img/gallery-2.jpg" class="img-fluid w-100" alt="Penentuan titik koordinat untuk tata batas kawasan hutan" loading="lazy">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                        <a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img/gallery-3.jpg">
-                            <img src="img/gallery-3.jpg" class="img-fluid w-100" alt="Pemandangan lokasi pertambangan terbuka dari atas" loading="lazy">
+                        <a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/gallery-3.jpg">
+                            <img src="https://rng.my.id/img/gallery-3.jpg" class="img-fluid w-100" alt="Pemandangan lokasi pertambangan terbuka dari atas" loading="lazy">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-                        <a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img/gallery-4.jpg">
-                            <img src="img/gallery-4.jpg" class="img-fluid w-100" alt="Proses reklamasi dan rehabilitasi lahan bekas tambang" loading="lazy">
+                        <a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/gallery-4.jpg">
+                            <img src="https://rng.my.id/img/gallery-4.jpg" class="img-fluid w-100" alt="Proses reklamasi dan rehabilitasi lahan bekas tambang" loading="lazy">
                         </a>
                     </div>
                 </div>
@@ -489,33 +510,33 @@
                 <!-- Slider Gallery -->
                 <div class="gallery-slider">
                     <div>
-                        <a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img/img-1.jpg">
-                            <img src="img/img-1.jpg" class="img-fluid w-100" alt="Diskusi tim di lapangan" loading="lazy">
+                        <a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-1.jpg">
+                            <img src="https://rng.my.id/img/img-1.jpg" class="img-fluid w-100" alt="Diskusi tim di lapangan" loading="lazy">
                         </a>
                     </div>
                     <div>
-                        <a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img/img-2.jpg">
-                            <img src="img/img-2.jpg" class="img-fluid w-100" alt="Penggunaan drone untuk pemetaan area" loading="lazy">
+                        <a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-2.jpg">
+                            <img src="https://rng.my.id/img/img-2.jpg" class="img-fluid w-100" alt="Penggunaan drone untuk pemetaan area" loading="lazy">
                         </a>
                     </div>
                     <div>
-                        <a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img/img-3.jpg">
+                        <a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-3.jpg">
                             <img src="img/img-3.jpg" class="img-fluid w-100" alt="Peralatan berat di lokasi proyek tambang" loading="lazy">
                         </a>
                     </div>
                     <div>
-                        <a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img/img-4.jpg">
-                            <img src="img/img-4.jpg" class="img-fluid w-100" alt="Bibit tanaman untuk program rehabilitasi DAS" loading="lazy">
+                        <a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-4.jpg">
+                            <img src="https://rng.my.id/img/img-4.jpg" class="img-fluid w-100" alt="Bibit tanaman untuk program rehabilitasi DAS" loading="lazy">
                         </a>
                     </div>
                     <div>
-                        <a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img/img-7.jpg">
-                            <img src="img/img-7.jpg" class="img-fluid w-100" alt="Instalasi untuk pengeboran air tanah" loading="lazy">
+                        <a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-7.jpg">
+                            <img src="https://rng.my.id/img/img-7.jpg" class="img-fluid w-100" alt="Instalasi untuk pengeboran air tanah" loading="lazy">
                         </a>
                     </div>
                     <div>
-                        <a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img/img-11.jpg">
-                            <img src="img/img-11.jpg" class="img-fluid w-100" alt="Sosialisasi program perhutanan sosial dengan masyarakat" loading="lazy">
+                        <a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-11.jpg">
+                            <img src="https://rng.my.id/img/img-11.jpg" class="img-fluid w-100" alt="Sosialisasi program perhutanan sosial dengan masyarakat" loading="lazy">
                         </a>
                     </div>
                 </div>
@@ -541,10 +562,9 @@
             <div class="row gy-4">
                 <div class="col-lg-4">
                     <div class="d-flex align-items-center mb-3">
-                        <img src="img/logo.webp" alt="Logo RNG di footer" style="height: 55px;" class="bg-black p-1 rounded-circle me-2" onerror="this.onerror=null;this.src='https://placehold.co/48x48/ffffff/064E3B?text=RNG';" loading="lazy">
+                        <img src="https://rng.my.id/img/logo.webp" alt="Logo RNG di footer" style="height: 55px;" class="bg-black p-1 rounded-circle me-2" onerror="this.onerror=null;this.src='https://placehold.co/48x48/ffffff/064E3B?text=RNG';" loading="lazy">
                         <span class="fw-bold fs-5 text-white">PT Rasyifa Nusantara Group</span>
                     </div>
-                    <!-- [PERUBAHAN] Slogan dibuat lebih menonjol -->
                     <p><span class="slogan-highlight">Jembatan Antara Kompleksitas menjadi Kesederhanaan, dengan Kepercayaan sebagai Landasan</span></p>
                     <div>
                         <a href="https://www.linkedin.com/in/rasyifa-nusantara-group-a6b825312/" target="_blank" rel="noopener noreferrer" class="d-inline-block me-3 fs-4"><i class="fa-brands fa-linkedin"></i></a>
@@ -556,7 +576,7 @@
                          <div class="col-md-6">
                             <h5 class="text-white mb-3">Informasi Kontak</h5>
                             <ul class="list-unstyled">
-                                <li class="d-flex mb-3"><i class="fa-solid fa-location-dot mt-1 me-3"></i><span>Perumahan Bluru Permai Blok R-22, RT. 03 RW. 09, Kec. Sidoarjo, Kab. Sidoarjo, Jawa Timur.</span></li>
+                                <li class="d-flex mb-3"><i class="fa-solid fa-location-dot mt-1 me-3"></i><span>Perumahan Bluru Permai Blok R-22, RT. 03 RW. 09, 61233. Kec. Sidoarjo, Kab. Sidoarjo, Jawa Timur,  Indonesia.</span></li>
                                 <li class="d-flex mb-3"><i class="fa-solid fa-envelope mt-1 me-3"></i><a href="mailto:rasyifa.nusantara@gmail.com">rasyifa.nusantara@gmail.com</a></li>
                             </ul>
                         </div>
