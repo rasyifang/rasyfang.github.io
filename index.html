@@ -11,10 +11,10 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.rasyifanusantara.com/">
+    <meta property="og:url" content="https://www.rasyifanusantaragroup.com/">
     <meta property="og:title" content="PT Rasyifa Nusantara Group - Konsultan Lingkungan & Perizinan Profesional">
     <meta property="og:description" content="Solusi lengkap perizinan lingkungan, kehutanan, dan pertambangan. Mengubah yang rumit menjadi sederhana secara amanah.">
-    <meta property="og:image" content="https://www.rasyifanusantara.com/img/img-2.jpg">
+    <meta property="og:image" content="https://www.rasyifanusantaragroup.com/img/img-2.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -24,7 +24,7 @@
     <meta property="twitter:image" content="https://www.rasyifanusantara.com/img/img-2.jpg">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.rasyifanusantara.com/">
+    <link rel="canonical" href="https://www.rasyifanusantaragroup.com/">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/icon.png">
@@ -36,7 +36,7 @@
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "PT Rasyifa Nusantara Group",
-      "image": "https://www.rasyifanusantara.com/img/logo.jpg",
+      "image": "https://www.rasyifanusantaragroup.com/img/logo.jpg",
       "description": "Konsultan profesional untuk perizinan lingkungan, kehutanan, dan pertambangan di Indonesia",
       "address": {
         "@type": "PostalAddress",
@@ -193,6 +193,25 @@
         footer a:hover {
             color: #fff;
         }
+        
+        /* [BARU] Efek untuk Slogan */
+        @keyframes pulse-glow {
+          0% {
+            text-shadow: 0 0 5px rgba(110, 231, 183, 0.6);
+          }
+          50% {
+            text-shadow: 0 0 14px rgba(110, 231, 183, 1);
+          }
+          100% {
+            text-shadow: 0 0 5px rgba(110, 231, 183, 0.6);
+          }
+        }
+        .slogan-highlight {
+          color: #6ee7b7; /* Warna hijau terang yang kontras */
+          font-weight: 600;
+          animation: pulse-glow 3s infinite ease-in-out;
+        }
+        /* [AKHIR BARU] */
 
         /* Gallery Slider Styles */
         .gallery-slider {
@@ -312,7 +331,8 @@
                         <span class="title-underline">PT. RASYIFA NUSANTARA GROUP</span>
                     </p>
                     <h1 class="h2 fw-normal mt-4" data-aos="fade-up" data-aos-delay="200">Menjembatani Pembangunan Ekonomi dan Kelestarian Lingkungan</h1>
-                    <p class="lead fs-5 mt-3 mb-4" data-aos="fade-up" data-aos-delay="300">Dengan slogan "Jembatan Antara Kompleksitas menjadi Kesederhanaan, dengan Kepercayaan sebagai Landasan"., kami menyediakan solusi konsultasi dan perizinan yang handal dan terpercaya.</p>
+                    <!-- [PERUBAHAN] Slogan dibuat lebih menonjol -->
+                    <p class="lead fs-5 mt-3 mb-4" data-aos="fade-up" data-aos-delay="300">Dengan slogan "<span class="slogan-highlight">Jembatan Antara Kompleksitas menjadi Kesederhanaan, dengan Kepercayaan sebagai Landasan.</span>", kami menyediakan solusi konsultasi dan perizinan yang handal dan terpercaya.</p>
                     <div class="d-flex justify-content-center flex-wrap gap-3" data-aos="fade-up" data-aos-delay="400">
                         <a href="#services" class="btn btn-light btn-lg fw-bold px-4">Jelajahi Layanan</a>
                         <a href="#contact" class="btn btn-outline-light btn-lg fw-bold px-4">Konsultasi Sekarang</a>
@@ -524,7 +544,8 @@
                         <img src="img/logo.png" alt="Logo RNG di footer" style="height: 55px;" class="bg-black p-1 rounded-circle me-2" onerror="this.onerror=null;this.src='https://placehold.co/48x48/ffffff/064E3B?text=RNG';" loading="lazy">
                         <span class="fw-bold fs-5 text-white">PT Rasyifa Nusantara Group</span>
                     </div>
-                    <p>Jembatan Antara Kompleksitas menjadi Kesederhanaan, dengan Kepercayaan sebagai Landasan</p>
+                    <!-- [PERUBAHAN] Slogan dibuat lebih menonjol -->
+                    <p><span class="slogan-highlight">Jembatan Antara Kompleksitas menjadi Kesederhanaan, dengan Kepercayaan sebagai Landasan</span></p>
                     <div>
                         <a href="https://www.linkedin.com/in/rasyifa-nusantara-group-a6b825312/" target="_blank" rel="noopener noreferrer" class="d-inline-block me-3 fs-4"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://www.instagram.com/rasyifa.nusantaragroup/" target="_blank" rel="noopener noreferrer" class="d-inline-block me-3 fs-4"><i class="fa-brands fa-instagram"></i></a>
