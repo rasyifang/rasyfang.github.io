@@ -6,15 +6,19 @@
     <title>PT Rasyifa Nusantara Group - Konsultan Lingkungan & Perizinan</title>
     
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
     <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
     <style>
         /* Perbaikan untuk mencegah scroll horizontal pada mobile */
@@ -49,7 +53,7 @@
             background-color: #f0fdf4;
         }
         .hero-bg {
-            background-image: linear-gradient(to top, rgba(5, 46, 22, 0.9), rgba(5, 46, 22, 0.3)), url('https://image.pollinations.ai/prompt/modern%20mining%20operation%20integrated%20with%20reclaimed%20green%20landscape,%20sustainable%20industry,%20aerial%20view?model=flux&nologo=true&enhance=true');
+            background-image: linear-gradient(to top, rgba(5, 46, 22, 0.9), rgba(5, 46, 22, 0.3)), url('img/hero-bg.jpg');
             background-size: cover;
             background-position: center;
             min-height: 80vh;
@@ -91,11 +95,9 @@
             transition: transform 0.2s ease;
             text-decoration: none;
         }
-
         .floating-whatsapp-btn:hover {
             transform: scale(1.1);
             color: #FFF;
-
         }
         .title-underline {
             display: inline-block;
@@ -121,6 +123,89 @@
         footer a:hover {
             color: #fff;
         }
+
+        /* Gallery Slider Styles */
+        .gallery-slider {
+            position: relative;
+            margin: 30px 0;
+        }
+        .gallery-slider .slick-slide {
+            padding: 0 8px;
+        }
+        .gallery-slider .slick-prev,
+        .gallery-slider .slick-next {
+            width: 40px;
+            height: 40px;
+            z-index: 1;
+            background-color: rgba(5, 150, 105, 0.8);
+            border-radius: 50%;
+        }
+        .gallery-slider .slick-prev:hover,
+        .gallery-slider .slick-next:hover {
+            background-color: var(--bs-primary);
+        }
+        .gallery-slider .slick-prev {
+            left: 15px;
+        }
+        .gallery-slider .slick-next {
+            right: 15px;
+        }
+        .gallery-slider .slick-prev:before,
+        .gallery-slider .slick-next:before {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            font-size: 20px;
+            color: white;
+        }
+        .gallery-slider .slick-prev:before {
+            content: "\f053";
+        }
+        .gallery-slider .slick-next:before {
+            content: "\f054";
+        }
+        .gallery-slider .slick-dots {
+            bottom: -30px;
+        }
+        .gallery-slider .slick-dots li button:before {
+            font-size: 10px;
+            color: var(--bs-primary);
+        }
+        .gallery-slider .slick-dots li.slick-active button:before {
+            color: var(--bs-primary);
+        }
+
+        /* Modal Gallery Styles */
+        .modal-gallery .modal-dialog {
+            max-width: 90%;
+            max-height: 90vh;
+        }
+        .modal-gallery .modal-content {
+            background: transparent;
+            border: none;
+        }
+        .modal-gallery .modal-body {
+            padding: 0;
+            text-align: center;
+        }
+        .modal-gallery img {
+            max-height: 80vh;
+            width: auto;
+            max-width: 100%;
+        }
+        .modal-gallery .btn-close {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            background: rgba(255,255,255,0.8);
+            opacity: 1;
+            z-index: 10;
+        }
+        .gallery-item {
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
     </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#mainNavbar">
@@ -129,7 +214,7 @@
     <nav id="mainNavbar" class="navbar navbar-expand-lg bg-white bg-opacity-90 backdrop-blur sticky-top shadow-sm">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="../logo.png" alt="Logo RNG" style="height: 75px; border-radius: 50%;" class="me-2" onerror="this.onerror=null;this.src='https://placehold.co/48x48/065F46/FFFFFF?text=RNG';">
+                <img src="./logo.png" alt="Logo RNG" style="height: 75px; border-radius: 50%;" class="me-2" onerror="this.onerror=null;this.src='https://placehold.co/48x48/065F46/FFFFFF?text=RNG';">
                 <span class="fw-bold fs-5 text-secondary">Rasyifa Nusantara Group</span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -286,13 +371,73 @@
                     <p class="section-kicker">Dokumentasi Proyek</p>
                     <h2 class="h1 fw-bold text-secondary">Galeri Kami</h2>
                 </div>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-4"><a href="https://image.pollinations.ai/prompt/Environmental%20consultant%20taking%20soil%20samples%20in%20a%20lush%20Indonesian%20forest?model=flux&nologo=true&enhance=true" class="gallery-item d-block shadow-sm"><img src="https://image.pollinations.ai/prompt/Environmental%20consultant%20taking%20soil%20samples%20in%20a%20lush%20Indonesian%20forest?model=flux&nologo=true&enhance=true" class="img-fluid" alt="Konsultan Lingkungan"></a></div>
-                    <div class="col-md-6 col-lg-4"><a href="https://image.pollinations.ai/prompt/Team%20of%20surveyors%20using%20modern%20theodolite%20equipment%20to%20map%20a%20forest%20boundary?model=flux&nologo=true&enhance=true" class="gallery-item d-block shadow-sm"><img src="https://image.pollinations.ai/prompt/Team%20of%20surveyors%20using%20modern%20theodolite%20equipment%20to%20map%20a%20forest%20boundary?model=flux&nologo=true&enhance=true" class="img-fluid" alt="Survei Batas Kawasan"></a></div>
-                    <div class="col-md-6 col-lg-4"><a href="https://image.pollinations.ai/prompt/Large%20open-pit%20coal%20mine%20with%20heavy%20excavators%20and%20trucks%20in%20action?model=flux&nologo=true&enhance=true" class="gallery-item d-block shadow-sm"><img src="https://image.pollinations.ai/prompt/Large%20open-pit%20coal%20mine%20with%20heavy%20excavators%20and%20trucks%20in%20action?model=flux&nologo=true&enhance=true" class="img-fluid" alt="Pertambangan Terbuka"></a></div>
-                    <div class="col-md-6 col-lg-4"><a href="https://image.pollinations.ai/prompt/Heavy%20machinery%20reforesting%20a%20former%20mining%20area,%20planting%20new%20saplings?model=flux&nologo=true&enhance=true" class="gallery-item d-block shadow-sm"><img src="https://image.pollinations.ai/prompt/Heavy%20machinery%20reforesting%20a%20former%20mining%20area,%20planting%20new%20saplings?model=flux&nologo=true&enhance=true" class="img-fluid" alt="Rehabilitasi Lahan Tambang"></a></div>
-                    <div class="col-md-6 col-lg-4"><a href="https://image.pollinations.ai/prompt/Drilling%20rig%20for%20ground%20water%20testing%20in%20a%20rural%20area?model=flux&nologo=true&enhance=true" class="gallery-item d-block shadow-sm"><img src="https://image.pollinations.ai/prompt/Drilling%20rig%20for%20ground%20water%20testing%20in%20a%20rural%20area?model=flux&nologo=true&enhance=true" class="img-fluid" alt="Pengeboran Air Tanah"></a></div>
-                    <div class="col-md-6 col-lg-4"><a href="https://image.pollinations.ai/prompt/Meeting%20between%20consultants%20and%20local%20community%20about%20a%20social%20forestry%20project?model=flux&nologo=true&enhance=true" class="gallery-item d-block shadow-sm"><img src="https://image.pollinations.ai/prompt/Meeting%20between%20consultants%20and%20local%20community%20about%20a%20social%20forestry%20project?model=flux&nologo=true&enhance=true" class="img-fluid" alt="Perhutanan Sosial"></a></div>
+                
+                <!-- Grid Gallery -->
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6 col-lg-4">
+                        <a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img/gallery-1.jpg">
+                            <img src="img/gallery-1.jpg" class="img-fluid w-100" alt="Konsultan Lingkungan">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img/gallery-2.jpg">
+                            <img src="img/gallery-2.jpg" class="img-fluid w-100" alt="Survei Batas Kawasan">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img/gallery-3.jpg">
+                            <img src="img/gallery-3.jpg" class="img-fluid w-100" alt="Pertambangan Terbuka">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img/gallery-4.jpg">
+                            <img src="img/gallery-4.jpg" class="img-fluid w-100" alt="Rehabilitasi Lahan Tambang">
+                        </a>
+                    </div>
+                    <!-- div class="col-md-6 col-lg-4">
+                        <a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img/gallery-5.jpg">
+                            <img src="img/gallery-5.jpg" class="img-fluid w-100" alt="Pengeboran Air Tanah">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img/gallery-7.jpg">
+                            <img src="img/gallery-7.jpg" class="img-fluid w-100" alt="Perhutanan Sosial"> 
+                        </a>
+                    </div -->
+                </div>
+                
+                <!-- Slider Gallery -->
+                <div class="gallery-slider">
+                    <div>
+                        <a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://image.pollinations.ai/prompt/Environmental%20consultant%20taking%20soil%20samples%20in%20a%20lush%20Indonesian%20forest?model=flux&nologo=true&enhance=true">
+                            <img src="https://image.pollinations.ai/prompt/Environmental%20consultant%20taking%20soil%20samples%20in%20a%20lush%20Indonesian%20forest?model=flux&nologo=true&enhance=true" class="img-fluid w-100" alt="Konsultan Lingkungan">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://image.pollinations.ai/prompt/Team%20of%20surveyors%20using%20modern%20theodolite%20equipment%20to%20map%20a%20forest%20boundary?model=flux&nologo=true&enhance=true">
+                            <img src="https://image.pollinations.ai/prompt/Team%20of%20surveyors%20using%20modern%20theodolite%20equipment%20to%20map%20a%20forest%20boundary?model=flux&nologo=true&enhance=true" class="img-fluid w-100" alt="Survei Batas Kawasan">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://image.pollinations.ai/prompt/Large%20open-pit%20coal%20mine%20with%20heavy%20excavators%20and%20trucks%20in%20action?model=flux&nologo=true&enhance=true">
+                            <img src="https://image.pollinations.ai/prompt/Large%20open-pit%20coal%20mine%20with%20heavy%20excavators%20and%20trucks%20in%20action?model=flux&nologo=true&enhance=true" class="img-fluid w-100" alt="Pertambangan Terbuka">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://image.pollinations.ai/prompt/Heavy%20machinery%20reforesting%20a%20former%20mining%20area,%20planting%20new%20saplings?model=flux&nologo=true&enhance=true">
+                            <img src="https://image.pollinations.ai/prompt/Heavy%20machinery%20reforesting%20a%20former%20mining%20area,%20planting%20new%20saplings?model=flux&nologo=true&enhance=true" class="img-fluid w-100" alt="Rehabilitasi Lahan Tambang">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://image.pollinations.ai/prompt/Drilling%20rig%20for%20ground%20water%20testing%20in%20a%20rural%20area?model=flux&nologo=true&enhance=true">
+                            <img src="https://image.pollinations.ai/prompt/Drilling%20rig%20for%20ground%20water%20testing%20in%20a%20rural%20area?model=flux&nologo=true&enhance=true" class="img-fluid w-100" alt="Pengeboran Air Tanah">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://image.pollinations.ai/prompt/Meeting%20between%20consultants%20and%20local%20community%20about%20a%20social%20forestry%20project?model=flux&nologo=true&enhance=true">
+                            <img src="https://image.pollinations.ai/prompt/Meeting%20between%20consultants%20and%20local%20community%20about%20a%20social%20forestry%20project?model=flux&nologo=true&enhance=true" class="img-fluid w-100" alt="Perhutanan Sosial">
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -350,12 +495,70 @@
         </div>
     </footer>
 
+    <!-- Gallery Modal -->
+    <div class="modal fade modal-gallery" id="galleryModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body">
+                    <img id="modalImage" src="" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/6281249756831" class="floating-whatsapp-btn" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Slick JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        // Initialize Slick Slider
+        $(document).ready(function(){
+            $('.gallery-slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+            
+            // Gallery Modal
+            $('#galleryModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget); // Button that triggered the modal
+                var imgSrc = button.data('img'); // Extract info from data-* attributes
+                var modal = $(this);
+                modal.find('#modalImage').attr('src', imgSrc);
+                modal.find('#modalImage').attr('alt', button.find('img').attr('alt'));
+            });
+        });
+    </script>
 </body>
 </html>
