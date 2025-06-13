@@ -136,14 +136,13 @@
         .modal-gallery .modal-body { padding: 0; text-align: center; }
         .modal-gallery img { max-height: 80vh; width: auto; max-width: 100%; }
         
-        /* -- Kode Tombol Close Modal yang Diperbarui -- */
         .modal-gallery .btn-close {
             position: absolute;
             top: 20px;
             right: 20px;
             z-index: 10;
-            background-color: rgba(0, 0, 0, 0.5); /* Latar belakang gelap semi-transparan */
-            border-radius: 50%; /* Membuatnya menjadi lingkaran */
+            background-color: rgba(0, 0, 0, 0.5); 
+            border-radius: 50%; 
             width: 40px;
             height: 40px;
             opacity: 0.8;
@@ -157,7 +156,6 @@
         .gallery-item { transition: transform .3s ease; }
         .gallery-item:hover { transform: scale(1.02); }
 
-        /* -- Kode Baru untuk Kartu Tim -- */
         .team-card {
             border: 1px solid var(--bs-border-color);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -177,29 +175,27 @@
             width: 38px;
             height: 38px;
         }
-        /* -- Akhir Kode Baru untuk Kartu Tim -- */
 
-        /* -- Kode Baru untuk Ukuran Slider -- */
         .slide-image-wrapper {
             display: block;
             position: relative;
-            overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari bingkai */
-            aspect-ratio: 4 / 3; /* Menetapkan rasio aspek 4:3. Anda bisa mengubahnya ke 16/9 untuk tampilan widescreen */
-            border-radius: .25rem; /* Opsi: memberikan sudut yang sedikit membulat */
-            background-color: #e2e8f0; /* Warna placeholder jika gambar gagal dimuat */
+            overflow: hidden; 
+            aspect-ratio: 4 / 3; 
+            border-radius: .25rem; 
+            background-color: #e2e8f0; 
         }
         [data-bs-theme="dark"] .slide-image-wrapper {
-            background-color: #334155; /* Warna placeholder untuk mode gelap */
+            background-color: #334155; 
         }
         .slide-image-wrapper img {
             width: 100%;
             height: 100%;
-            object-fit: cover;  /* Kunci utamanya: memastikan gambar menutupi bingkai tanpa distorsi */
-            object-position: center; /* Memastikan gambar terpusat di dalam bingkai */
-            transition: transform 0.3s ease; /* Menambahkan kembali efek transisi saat hover */
+            object-fit: cover;  
+            object-position: center; 
+            transition: transform 0.3s ease; 
         }
         .slide-image-wrapper:hover img {
-            transform: scale(1.05); /* Efek zoom saat kursor di atas gambar */
+            transform: scale(1.05); 
         }
 
         #map-container {
@@ -241,6 +237,88 @@
         [data-bs-theme="dark"] .theme-toggle-icon {
             color: var(--bs-secondary);
         }
+
+        /* -- Kode Baru untuk Timeline -- */
+        .timeline-section {
+            position: relative;
+            padding: 2rem 0;
+        }
+        .timeline-section::before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            background-color: var(--bs-border-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1.5px;
+        }
+        .timeline-item {
+            padding: 1rem 2.5rem;
+            position: relative;
+            width: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--bs-tertiary-bg);
+            border: 4px solid var(--bs-primary);
+            top: 1.5rem;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+        .timeline-content {
+            padding: 1.5rem;
+            background-color: var(--bs-tertiary-bg);
+            border-radius: .5rem;
+            box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+            transition: transform .3s ease;
+            border: 1px solid var(--bs-border-color);
+        }
+        .timeline-content:hover {
+            transform: translateY(-5px);
+        }
+        .timeline-year {
+            font-weight: 800;
+            color: var(--bs-primary);
+            background-color: var(--bs-light-green-bg);
+            display: inline-block;
+            padding: .25rem .75rem;
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsif untuk layar kecil */
+        @media screen and (max-width: 768px) {
+            .timeline-section::before {
+                left: 20px;
+            }
+            .timeline-item {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 15px;
+            }
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            .timeline-item::after {
+                left: 10px;
+            }
+        }
+        /* -- Akhir Kode Baru untuk Timeline -- */
     </style>
 
     <script type="application/ld+json">
@@ -292,6 +370,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto fw-semibold">
                         <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#timeline">Sejarah</a></li>
                         <li class="nav-item"><a class="nav-link" href="#team">Tim</a></li>
                         <li class="nav-item"><a class="nav-link" href="#services">Layanan</a></li>
                         <li class="nav-item"><a class="nav-link" href="#testimonials">Testimoni</a></li>
@@ -355,7 +434,54 @@
                 </div>
             </div>
         </section>
-        
+
+        <section id="timeline" class="py-5">
+            <div class="container py-5" data-aos="fade-up">
+                <div class="text-center mb-5">
+                    <p class="section-kicker">Perjalanan Kami</p>
+                    <h2 class="h1 fw-bold text-secondary">Tonggak Sejarah Perusahaan</h2>
+                    <p class="lead col-lg-8 mx-auto">Menandai langkah-langkah penting dalam komitmen kami terhadap keunggulan dan integritas.</p>
+                </div>
+
+                <div class="timeline-section">
+                    <div class="row mx-auto">
+                        <div class="col-12">
+                            <div class="timeline-item" data-aos="fade-right">
+                                <div class="timeline-content">
+                                    <h4 class="timeline-year">2020</h4>
+                                    <h5 class="fw-bold text-secondary">Pendirian Perusahaan</h5>
+                                    <p class="text-muted small">PT Rasyifa Nusantara Group didirikan dengan visi untuk menjembatani pembangunan ekonomi dengan kelestarian lingkungan.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item" data-aos="fade-left">
+                                <div class="timeline-content">
+                                    <h4 class="timeline-year">2021</h4>
+                                    <h5 class="fw-bold text-secondary">Ekspansi Layanan Awal</h5>
+                                    <p class="text-muted small">Memperluas cakupan layanan untuk mencakup konsultasi lingkungan, kehutanan, dan pertanian secara komprehensif.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item" data-aos="fade-right">
+                                <div class="timeline-content">
+                                    <h4 class="timeline-year">2023</h4>
+                                    <h5 class="fw-bold text-secondary">Penyelesaian Proyek Strategis</h5>
+                                    <p class="text-muted small">Berhasil menyelesaikan proyek pengurusan IPPKH dan pendampingan UKL-UPL untuk klien-klien ternama, membangun reputasi yang solid.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item" data-aos="fade-left">
+                                <div class="timeline-content">
+                                    <h4 class="timeline-year">2025</h4>
+                                    <h5 class="fw-bold text-secondary">Inovasi dan Pertumbuhan</h5>
+                                    <p class="text-muted small">Terus berinovasi dalam memberikan solusi perizinan yang sederhana, amanah, dan tepat sasaran untuk menghadapi tantangan masa depan.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="team" class="py-5 bg-light-green">
             <div class="container py-5" data-aos="fade-up">
                 <div class="text-center mb-5">
