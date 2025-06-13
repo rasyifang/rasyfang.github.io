@@ -53,163 +53,180 @@
     <!-- Custom CSS -->
     <style>
         /* Light Mode Variables */
-        :root {
-            --bs-primary: #059669; /* Emerald 600 */
-            --bs-primary-rgb: 5, 150, 105;
-            --bs-secondary: #064e3b; /* Emerald 900 */
-            --bs-body-color: #475569; /* Slate 600 */
-            --bs-body-bg: #f8f9fa; /* Slate 50 */
-            --bs-body-font-weight: 400;
-            --bs-tertiary-bg: #ffffff;
-            --bs-border-color: #e2e8f0;
-            --bs-light-green-bg: #f0fdf4;
-        }
+:root {
+    --bs-primary: #059669; /* Emerald 600 */
+    --bs-primary-rgb: 5, 150, 105;
+    --bs-secondary: #064e3b; /* Emerald 900 */
+    --bs-body-color: #475569; /* Slate 600 */
+    --bs-body-bg: #f8f9fa; /* Slate 50 */
+    --bs-body-font-weight: 400;
+    --bs-tertiary-bg: #ffffff;
+    --bs-border-color: #e2e8f0;
+    --bs-light-green-bg: #f0fdf4;
+}
 
-        /* Dark Mode Variables */
-        [data-bs-theme="dark"] {
-            --bs-primary: #34d399; /* Emerald 400 */
-            --bs-primary-rgb: 52, 211, 153;
-            --bs-secondary: #a7f3d0; /* Emerald 200 */
-            --bs-body-color: #cbd5e1; /* Slate 300 */
-            --bs-body-bg: #1e293b; /* Slate 800 */
-            --bs-tertiary-bg: #334155; /* Slate 700 */
-            --bs-border-color: #475569; /* Slate 600 */
-            --bs-light-green-bg: #064e3b; /* Emerald 900 */
-            --bs-dark: #0f172a; /* Slate 900 */
-        }
-        
-        html, body { overflow-x: hidden; width: 100%; }
-        body { 
-            font-family: 'Inter', sans-serif;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
+/* Dark Mode Variables */
+[data-bs-theme="dark"] {
+    --bs-primary: #34d399; /* Emerald 400 */
+    --bs-primary-rgb: 52, 211, 153;
+    --bs-secondary: #a7f3d0; /* Emerald 200 */
+    --bs-body-color: #cbd5e1; /* Slate 300 */
+    --bs-body-bg: #1e293b; /* Slate 800 */
+    --bs-tertiary-bg: #334155; /* Slate 700 */
+    --bs-border-color: #475569; /* Slate 600 */
+    --bs-light-green-bg: #064e3b; /* Emerald 900 */
+    --bs-dark: #0f172a; /* Slate 900 */
+}
 
-        .bg-light-green { background-color: var(--bs-light-green-bg); }
-        .bg-white { background-color: var(--bs-tertiary-bg) !important; }
-        .testimonial-card { background-color: var(--bs-tertiary-bg); border-left: 5px solid var(--bs-primary); }
-        .nav-tabs .nav-link { color: var(--bs-body-color); font-weight: 600; border-color: transparent; }
-        .nav-tabs .nav-link.active { color: var(--bs-primary); border-color: var(--bs-primary); border-bottom-width: 3px; background-color: transparent;}
-        .shadow-sm { box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important; }
+html, body { overflow-x: hidden; width: 100%; }
+body { 
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-        [data-bs-theme="dark"] .shadow-sm { box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .15) !important; }
-        [data-bs-theme="dark"] .navbar { background-color: rgba(30, 41, 59, 0.9) !important; }
-        [data-bs-theme="dark"] .text-secondary { color: var(--bs-secondary) !important; }
-        [data-bs-theme="dark"] .slogan-highlight { text-shadow: 0 0 8px rgba(52, 211, 153, 0.7); }
-        [data-bs-theme="dark"] .form-control { background-color: #475569; color: #f1f5f9; border-color: #64748b;}
-        [data-bs-theme="dark"] .form-control:focus { background-color: #475569; color: #f1f5f9; border-color: var(--bs-primary); box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);}
-        [data-bs-theme="dark"] footer { background-color: var(--bs-dark) !important; }
-        [data-bs-theme="dark"] #map-container { border-color: rgba(255, 255, 255, 0.2); }
-        [data-bs-theme="dark"] .hero-bg { background-image: linear-gradient(to top,rgba(15, 23, 42, .9),rgba(15, 23, 42, .3)),url(https://rng.my.id/img/hero-bg.webp); }
+.bg-light-green { background-color: var(--bs-light-green-bg); }
+.bg-white { background-color: var(--bs-tertiary-bg) !important; }
+.testimonial-card { background-color: var(--bs-tertiary-bg); border-left: 5px solid var(--bs-primary); }
+.nav-tabs .nav-link { color: var(--bs-body-color); font-weight: 600; border-color: transparent; }
+.nav-tabs .nav-link.active { color: var(--bs-primary); border-color: var(--bs-primary); border-bottom-width: 3px; background-color: transparent;}
+.shadow-sm { box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important; }
 
-        .btn-primary {
-            --bs-btn-bg: var(--bs-primary);
-            --bs-btn-border-color: var(--bs-primary);
-            --bs-btn-hover-bg: #047857;
-            --bs-btn-hover-border-color: #047857;
-        }
-        [data-bs-theme="dark"] .btn-primary {
-            --bs-btn-hover-bg: #10b981;
-            --bs-btn-hover-border-color: #10b981;
-        }
+[data-bs-theme="dark"] .shadow-sm { box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .15) !important; }
+[data-bs-theme="dark"] .navbar { background-color: rgba(30, 41, 59, 0.9) !important; }
+[data-bs-theme="dark"] .text-secondary { color: var(--bs-secondary) !important; }
+[data-bs-theme="dark"] .slogan-highlight { text-shadow: 0 0 8px rgba(52, 211, 153, 0.7); }
+[data-bs-theme="dark"] .form-control { background-color: #475569; color: #f1f5f9; border-color: #64748b;}
+[data-bs-theme="dark"] .form-control:focus { background-color: #475569; color: #f1f5f9; border-color: var(--bs-primary); box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);}
+[data-bs-theme="dark"] footer { background-color: var(--bs-dark) !important; }
+[data-bs-theme="dark"] #map-container { border-color: rgba(255, 255, 255, 0.2); }
+[data-bs-theme="dark"] .hero-bg { background-image: linear-gradient(to top,rgba(15, 23, 42, .9),rgba(15, 23, 42, .3)),url(https://rng.my.id/img/hero-bg.webp); }
 
-        .hero-bg {
-            background-image: linear-gradient(to top, rgba(5, 46, 22, 0.9), rgba(5, 46, 22, 0.3)), url('https://rng.my.id/img/hero-bg.webp');
-            background-size: cover;
-            background-position: center;
-            min-height: 80vh;
-        }
-        .section-kicker { font-weight: 600; color: var(--bs-primary); text-transform: uppercase; letter-spacing: .05em; }
-        .floating-whatsapp-btn { position: fixed; bottom: 25px; right: 25px; background-color: #25d366; color: #fff; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 2px 2px 10px rgba(0,0,0,.2); z-index: 1030; transition: transform .2s ease; text-decoration: none; }
-        .floating-whatsapp-btn:hover { transform: scale(1.1); color: #fff; }
-        .title-underline { display: inline-block; position: relative; padding-bottom: .5rem; }
-        .title-underline::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 50%; height: 4px; background-color: var(--bs-primary); border-radius: 2px; }
-        footer a { text-decoration: none; color: #adb5bd; transition: color .3s ease; }
-        footer a:hover { color: #fff; }
-        @keyframes pulse-glow { 0% { text-shadow: 0 0 5px rgba(110, 231, 183, 0.6); } 50% { text-shadow: 0 0 14px rgba(110, 231, 183, 1); } 100% { text-shadow: 0 0 5px rgba(110, 231, 183, 0.6); } }
-        .slogan-highlight { color: #6ee7b7; font-weight: 600; animation: pulse-glow 3s infinite ease-in-out; }
-        .gallery-slider { position: relative; margin: 30px 0; }
-        .gallery-slider .slick-slide { padding: 0 8px; }
-        .gallery-slider .slick-prev, .gallery-slider .slick-next { width: 40px; height: 40px; z-index: 1; background-color: rgba(5,150,105,.8); border-radius: 50%; }
-        .gallery-slider .slick-prev:hover, .gallery-slider .slick-next:hover { background-color: var(--bs-primary); }
-        .gallery-slider .slick-prev { left: 15px; }
-        .gallery-slider .slick-next { right: 15px; }
-        .gallery-slider .slick-prev:before, .gallery-slider .slick-next:before { font-family: "Font Awesome 6 Free"; font-weight: 900; font-size: 20px; color: #fff; }
-        .gallery-slider .slick-prev:before { content: "\f053"; }
-        .gallery-slider .slick-next:before { content: "\f054"; }
-        .gallery-slider .slick-dots { bottom: -30px; }
-        .gallery-slider .slick-dots li button:before { font-size: 10px; color: var(--bs-primary); }
-        .gallery-slider .slick-dots li.slick-active button:before { color: var(--bs-primary); }
-        .modal-gallery .modal-dialog { max-width: 90%; max-height: 90vh; }
-        .modal-gallery .modal-content { background: transparent; border: none; }
-        .modal-gallery .modal-body { padding: 0; text-align: center; }
-        .modal-gallery img { max-height: 80vh; width: auto; max-width: 100%; }
-        .modal-gallery .btn-close { position: absolute; right: 15px; top: 15px; background: rgba(255,255,255,.8); opacity: 1; z-index: 10; }
-        [data-bs-theme="dark"] .modal-gallery .btn-close { background: rgba(0, 0, 0, 0.5); }
-        .gallery-item { transition: transform .3s ease; }
-        .gallery-item:hover { transform: scale(1.02); }
-        #map-container {
-            width: 100%;
-            height: 450px;
-            border-radius: 0.5rem;
-            overflow: hidden;
-            margin-top: 2rem;
-            border: 1px solid var(--bs-border-color);
-        }
-        #map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
+.btn-primary {
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-bg: #047857;
+    --bs-btn-hover-border-color: #047857;
+}
+[data-bs-theme="dark"] .btn-primary {
+    --bs-btn-hover-bg: #10b981;
+    --bs-btn-hover-border-color: #10b981;
+}
 
-        /* Dark Mode Toggle Switch */
-        .theme-toggle {
-            display: flex;
-            align-items: center;
-        }
-        .theme-toggle .form-check-input {
-            width: 3.5em;
-            height: 1.75em;
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280,0,0,0.25%29'/%3e%3c/svg%3e");
-            background-position: left center;
-            border-color: rgba(0,0,0,0.2);
-        }
-        .theme-toggle .form-check-input:checked {
-            background-color: var(--bs-primary);
-            border-color: var(--bs-primary);
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
-            background-position: right center;
-        }
-        .theme-toggle-icon {
-            font-size: 1.25rem;
-            color: #6c757d;
-        }
-        [data-bs-theme="dark"] .theme-toggle-icon {
-            color: var(--bs-secondary);
-        }
-		.slide-image-wrapper {
-        display: block;
-        position: relative;
-        overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari bingkai */
-        aspect-ratio: 4 / 3; /* Menetapkan rasio aspek 4:3. Anda bisa mengubahnya ke 16/9 untuk tampilan widescreen */
-        border-radius: .25rem; /* Opsi: memberikan sudut yang sedikit membulat */
-        background-color: #e2e8f0; /* Warna placeholder jika gambar gagal dimuat */
-    }
+.hero-bg {
+    background-image: linear-gradient(to top, rgba(5, 46, 22, 0.9), rgba(5, 46, 22, 0.3)), url('https://rng.my.id/img/hero-bg.webp');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+}
+.section-kicker { font-weight: 600; color: var(--bs-primary); text-transform: uppercase; letter-spacing: .05em; }
+.floating-whatsapp-btn { position: fixed; bottom: 25px; right: 25px; background-color: #25d366; color: #fff; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 2px 2px 10px rgba(0,0,0,.2); z-index: 1030; transition: transform .2s ease; text-decoration: none; }
+.floating-whatsapp-btn:hover { transform: scale(1.1); color: #fff; }
+.title-underline { display: inline-block; position: relative; padding-bottom: .5rem; }
+.title-underline::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 50%; height: 4px; background-color: var(--bs-primary); border-radius: 2px; }
+footer a { text-decoration: none; color: #adb5bd; transition: color .3s ease; }
+footer a:hover { color: #fff; }
+@keyframes pulse-glow { 0% { text-shadow: 0 0 5px rgba(110, 231, 183, 0.6); } 50% { text-shadow: 0 0 14px rgba(110, 231, 183, 1); } 100% { text-shadow: 0 0 5px rgba(110, 231, 183, 0.6); } }
+.slogan-highlight { color: #6ee7b7; font-weight: 600; animation: pulse-glow 3s infinite ease-in-out; }
+.gallery-slider { position: relative; margin: 30px 0; }
+.gallery-slider .slick-slide { padding: 0 8px; }
+.gallery-slider .slick-prev, .gallery-slider .slick-next { width: 40px; height: 40px; z-index: 1; background-color: rgba(5,150,105,.8); border-radius: 50%; }
+.gallery-slider .slick-prev:hover, .gallery-slider .slick-next:hover { background-color: var(--bs-primary); }
+.gallery-slider .slick-prev { left: 15px; }
+.gallery-slider .slick-next { right: 15px; }
+.gallery-slider .slick-prev:before, .gallery-slider .slick-next:before { font-family: "Font Awesome 6 Free"; font-weight: 900; font-size: 20px; color: #fff; }
+.gallery-slider .slick-prev:before { content: "\f053"; }
+.gallery-slider .slick-next:before { content: "\f054"; }
+.gallery-slider .slick-dots { bottom: -30px; }
+.gallery-slider .slick-dots li button:before { font-size: 10px; color: var(--bs-primary); }
+.gallery-slider .slick-dots li.slick-active button:before { color: var(--bs-primary); }
+.modal-gallery .modal-dialog { max-width: 90%; max-height: 90vh; }
+.modal-gallery .modal-content { background: transparent; border: none; }
+.modal-gallery .modal-body { padding: 0; text-align: center; }
+.modal-gallery img { max-height: 80vh; width: auto; max-width: 100%; }
 
-    [data-bs-theme="dark"] .slide-image-wrapper {
-        background-color: #334155; /* Warna placeholder untuk mode gelap */
-    }
+/* -- Kode Tombol Close Modal yang Diperbarui -- */
+.modal-gallery .btn-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang gelap semi-transparan */
+    border-radius: 50%; /* Membuatnya menjadi lingkaran */
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
+    transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.modal-gallery .btn-close:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
 
-    .slide-image-wrapper img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;  /* Kunci utamanya: memastikan gambar menutupi bingkai tanpa distorsi */
-        object-position: center; /* Memastikan gambar terpusat di dalam bingkai */
-        transition: transform 0.3s ease; /* Menambahkan kembali efek transisi saat hover */
-    }
+.gallery-item { transition: transform .3s ease; }
+.gallery-item:hover { transform: scale(1.02); }
 
-    .slide-image-wrapper:hover img {
-        transform: scale(1.05); /* Efek zoom saat kursor di atas gambar */
-    }
+/* -- Kode Baru untuk Ukuran Slider -- */
+.slide-image-wrapper {
+    display: block;
+    position: relative;
+    overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari bingkai */
+    aspect-ratio: 4 / 3; /* Menetapkan rasio aspek 4:3. Anda bisa mengubahnya ke 16/9 untuk tampilan widescreen */
+    border-radius: .25rem; /* Opsi: memberikan sudut yang sedikit membulat */
+    background-color: #e2e8f0; /* Warna placeholder jika gambar gagal dimuat */
+}
+[data-bs-theme="dark"] .slide-image-wrapper {
+    background-color: #334155; /* Warna placeholder untuk mode gelap */
+}
+.slide-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Kunci utamanya: memastikan gambar menutupi bingkai tanpa distorsi */
+    object-position: center; /* Memastikan gambar terpusat di dalam bingkai */
+    transition: transform 0.3s ease; /* Menambahkan kembali efek transisi saat hover */
+}
+.slide-image-wrapper:hover img {
+    transform: scale(1.05); /* Efek zoom saat kursor di atas gambar */
+}
+
+#map-container {
+    width: 100%;
+    height: 450px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-top: 2rem;
+    border: 1px solid var(--bs-border-color);
+}
+#map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Dark Mode Toggle Switch */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+}
+.theme-toggle .form-check-input {
+    width: 3.5em;
+    height: 1.75em;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280,0,0,0.25%29'/%3e%3c/svg%3e");
+    background-position: left center;
+    border-color: rgba(0,0,0,0.2);
+}
+.theme-toggle .form-check-input:checked {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+    background-position: right center;
+}
+.theme-toggle-icon {
+    font-size: 1.25rem;
+    color: #6c757d;
+}
+[data-bs-theme="dark"] .theme-toggle-icon {
+    color: var(--bs-secondary);
+}
     </style>
 
     <!-- Structured Data -->
@@ -560,7 +577,7 @@
 
     <!-- Gallery Modal -->
     <div class="modal fade modal-gallery" id="galleryModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button><div class="modal-body"><img id="modalImage" src="" alt="" class="img-fluid" loading="lazy"></div></div></div>
+        <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button><div class="modal-body"><img id="modalImage" src="" alt="" class="img-fluid" loading="lazy"></div></div></div>
     </div>
 
     <!-- Floating WhatsApp Button -->
