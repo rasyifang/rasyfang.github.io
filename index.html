@@ -186,6 +186,30 @@
         [data-bs-theme="dark"] .theme-toggle-icon {
             color: var(--bs-secondary);
         }
+		.slide-image-wrapper {
+        display: block;
+        position: relative;
+        overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari bingkai */
+        aspect-ratio: 4 / 3; /* Menetapkan rasio aspek 4:3. Anda bisa mengubahnya ke 16/9 untuk tampilan widescreen */
+        border-radius: .25rem; /* Opsi: memberikan sudut yang sedikit membulat */
+        background-color: #e2e8f0; /* Warna placeholder jika gambar gagal dimuat */
+    }
+
+    [data-bs-theme="dark"] .slide-image-wrapper {
+        background-color: #334155; /* Warna placeholder untuk mode gelap */
+    }
+
+    .slide-image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;  /* Kunci utamanya: memastikan gambar menutupi bingkai tanpa distorsi */
+        object-position: center; /* Memastikan gambar terpusat di dalam bingkai */
+        transition: transform 0.3s ease; /* Menambahkan kembali efek transisi saat hover */
+    }
+
+    .slide-image-wrapper:hover img {
+        transform: scale(1.05); /* Efek zoom saat kursor di atas gambar */
+    }
     </style>
 
     <!-- Structured Data -->
@@ -389,15 +413,63 @@
                     </div>
                 </div>
                 <!-- Slider Gallery -->
-                <div class="gallery-slider">
-                    <div><a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-1.webp"><img src="https://rng.my.id/img/img-1.webp" class="img-fluid w-100" alt="Diskusi tim di lapangan" width="362" height="272" loading="lazy"></a></div>
-                    <div><a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-2.webp"><img src="https://rng.my.id/img/img-2.webp" class="img-fluid w-100" alt="Penggunaan drone untuk pemetaan area" width="362" height="272" loading="lazy"></a></div>
-                    <div><a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-3.webp"><img src="https://rng.my.id/img/img-3.webp" class="img-fluid w-100" alt="Peralatan berat di lokasi proyek tambang" width="362" height="272" loading="lazy"></a></div>
-                    <div><a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-4.webp"><img src="https://rng.my.id/img/img-4.webp" class="img-fluid w-100" alt="Bibit tanaman untuk program rehabilitasi DAS" width="362" height="272" loading="lazy"></a></div>
-                    <div><a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-7.webp"><img src="https://rng.my.id/img/img-7.webp" class="img-fluid w-100" alt="Instalasi untuk pengeboran air tanah" width="362" height="272" loading="lazy"></a></div>
-                    <div><a href="#" class="d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-11.webp"><img src="https://rng.my.id/img/img-11.webp" class="img-fluid w-100" alt="Sosialisasi program perhutanan sosial dengan masyarakat" width="362" height="272" loading="lazy"></a></div>
-                </div>
-            </div>
+<div class="gallery-slider">
+    <div>
+        <a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-1.jpg">
+            <img src="https://rng.my.id/img/img-1.jpg" alt="Diskusi tim di lapangan" loading="lazy">
+        </a>
+    </div>
+    <div>
+        <a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-2.jpg">
+            <img src="https://rng.my.id/img/img-2.jpg" alt="Penggunaan drone untuk pemetaan area" loading="lazy">
+        </a>
+    </div>
+    <div>
+        <a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-3.jpg">
+            <img src="https://rng.my.id/img/img-3.jpg" alt="Peralatan berat di lokasi proyek tambang" loading="lazy">
+        </a>
+    </div>
+    <div>
+        <a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-4.jpg">
+            <img src="https://rng.my.id/img/img-4.jpg" alt="Bibit tanaman untuk program rehabilitasi DAS" loading="lazy">
+        </a>
+    </div>
+    <div>
+        <a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-5.jpg">
+            <img src="https://rng.my.id/img/img-5.jpg" alt="Instalasi untuk pengeboran air tanah" loading="lazy">
+        </a>
+    </div>
+    <div>
+        <a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-6.jpg">
+            <img src="https://rng.my.id/img/img-6.jpg" alt="Sosialisasi program perhutanan sosial dengan masyarakat" loading="lazy">
+        </a>
+    </div>
+    <div>
+        <a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-7.jpg">
+            <img src="https://rng.my.id/img/img-7.jpg" alt="Tim konsultan melakukan survei lapangan" loading="lazy">
+        </a>
+    </div>
+    <div>
+        <a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-8.jpg">
+            <img src="https://rng.my.id/img/img-8.jpg" alt="Penentuan titik koordinat untuk tata batas" loading="lazy">
+        </a>
+    </div>
+    <div>
+        <a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-9.jpg">
+            <img src="https://rng.my.id/img/img-9.jpg" alt="Pemandangan lokasi pertambangan dari atas" loading="lazy">
+        </a>
+    </div>
+    <div>
+        <a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/gallery-img-10.jpg">
+            <img src="https://rng.my.id/img/img-10.jpg" alt="Proses reklamasi lahan bekas tambang" loading="lazy">
+        </a>
+    </div>
+    <div>
+        <a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-11.jpg">
+            <img src="https://rng.my.id/img/img-11.jpg" alt="Diskusi teknis mengenai perizinan lingkungan" loading="lazy">
+        </a>
+    </div>
+</div>
         </section>
 
         <!-- CTA Section -->
