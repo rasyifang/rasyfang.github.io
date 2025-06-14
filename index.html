@@ -317,17 +317,17 @@
             }
         }
         
-        /* -- Kode Baru untuk Logo Klien -- */
+        /* -- Kode Logo Klien (Diperbarui) -- */
         .clients-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 2rem;
+            gap: 2.5rem; /* Sedikit memperbesar jarak antar logo */
         }
         .client-logo {
-            max-height: 60px; /* Atur tinggi maksimal logo */
-            max-width: 150px; /* Atur lebar maksimal logo */
+            height: 45px; /* Menggunakan height agar lebih seragam */
+            max-width: 150px;
             filter: grayscale(100%);
             opacity: 0.7;
             transition: all 0.3s ease-in-out;
@@ -337,12 +337,15 @@
             opacity: 1;
             transform: scale(1.1);
         }
+        /* CSS yang diperbaiki untuk mode gelap */
         [data-bs-theme="dark"] .client-logo {
-            filter: brightness(0) invert(1) grayscale(100%);
-            opacity: 0.6;
+            /* Kombinasi filter ini mengubah logo menjadi versi putih */
+            filter: brightness(0) invert(1);
+            opacity: 0.7;
         }
         [data-bs-theme="dark"] .client-logo:hover {
-            filter: brightness(0) invert(1) grayscale(0%);
+            /* Menghilangkan filter untuk menampilkan warna asli saat di-hover */
+            filter: none;
             opacity: 1;
         }
     </style>
@@ -611,6 +614,19 @@
                             </div>
                         </div>
                     </div>
+<div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+    <div class="testimonial-card p-4 shadow-sm h-100">
+        <i class="fa-solid fa-quote-left text-primary fa-2x opacity-25"></i>
+        <p class="fst-italic my-3">"Kerja sama dengan PT Rasyifa Nusantara Group sangat luar biasa. Mereka tidak hanya ahli dalam menavigasi regulasi yang rumit, tetapi juga memberikan pendampingan yang responsif dan solutif. Proyek kami selesai lebih cepat dari jadwal berkat efisiensi mereka."</p>
+        <div class="d-flex align-items-center">
+            <img src="https://placehold.co/50x50/059669/FFFFFF?text=AH" class="rounded-circle" width="50" height="50" alt="Foto kepala Ahmad Hidayat" loading="lazy">
+            <div class="ms-3">
+                <p class="fw-bold mb-0">Ahmad Hidayat</p>
+                <small class="text-muted">Project Director, PT Cahaya Bumi Lestari</small>
+            </div>
+        </div>
+    </div>
+</div>
                 </div>
             </div>
         </section>
@@ -623,14 +639,18 @@
                     <p class="lead col-lg-8 mx-auto">Kami bangga dapat bekerja sama dengan berbagai perusahaan terkemuka di berbagai industri.</p>
                 </div>
                 <div class="clients-grid" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://placehold.co/150x60/808080/FFFFFF?text=Pertamina" class="client-logo" alt="Logo Klien Pertamina Patra Niaga">
-                    <img src="https://placehold.co/150x60/808080/FFFFFF?text=Freeport" class="client-logo" alt="Logo Klien Freeport Indonesia">
-                    <img src="https://placehold.co/150x60/808080/FFFFFF?text=Adaro" class="client-logo" alt="Logo Klien Adaro Energy">
-                    <img src="https://placehold.co/150x60/808080/FFFFFF?text=Waskita" class="client-logo" alt="Logo Klien Waskita Karya">
-                    <img src="https://placehold.co/150x60/808080/FFFFFF?text=TJB" class="client-logo" alt="Logo Klien Tujuh Bara Sejahtera">
+                    <img src="https://cdn.svgporn.com/logos/google-icon.svg" class="client-logo" alt="Logo Klien Google">
+                    <img src="https://cdn.svgporn.com/logos/microsoft-windows-icon.svg" class="client-logo" alt="Logo Klien Microsoft">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Amazon_icon.svg/960px-Amazon_icon.svg.png" class="client-logo" alt="Logo Klien Amazon">
+                    <img src="https://cdn.svgporn.com/logos/bootstrap.svg" class="client-logo" alt="Logo Klien Bootstrap">
+                    <img src="https://cdn.svgporn.com/logos/chrome.svg" class="client-logo" alt="Logo Klien Chrome">
+                    <img src="https://cdn.svgporn.com/logos/firefox.svg" class="client-logo" alt="Logo Klien Mozilla">
+                    <img src="https://cdn.svgporn.com/logos/facebook.svg" class="client-logo" alt="Logo Klien Facebook">
+                    <img src="https://cdn.svgporn.com/logos/adobe-icon.svg" class="client-logo" alt="Logo Klien Adobe">
                 </div>
             </div>
         </section>
+        
         <section id="gallery" class="py-5 bg-light-green">
             <div class="container py-5" data-aos="fade-up">
                 <div class="text-center mb-5">
