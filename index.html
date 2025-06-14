@@ -14,7 +14,7 @@
     <link rel="preload" as="image" href="https://rng.my.id/img/hero-bg.webp">
 
     <meta name="description" content="PT Rasyifa Nusantara Group - Konsultan profesional untuk perizinan lingkungan, kehutanan, dan pertambangan. Solusi lengkap AMDAL, UKL-UPL, IPPKH, dan perizinan industri lainnya di Indonesia.">
-    <meta name="keywords" content="konsultan lingkungan, perizinan pertambangan, AMDAL, UKL-UPL, IPPKH, izin lingkungan, konsultan kehutanan, perizinan industri, sertifikasi lingkungan, PT Rasyifa Nusantara Group">
+    <meta name="keywords" content="konsultan lingkungan, perizinan pertambangan, AMDAL, UKL-UPL, IPPKH, izin lingkungan, konsultan kehutanan, perizinan industri, sertifikasi lingkungan, PT Rasyifa Nusantara Group, portofolio proyek lingkungan">
     <meta name="author" content="PT Rasyifa Nusantara Group">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.rng.my.id/">
@@ -348,6 +348,41 @@
             filter: none;
             opacity: 1;
         }
+
+        /* -- Kode untuk Kartu Proyek -- */
+        .project-card {
+            border: 1px solid var(--bs-border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: var(--bs-tertiary-bg);
+            border-radius: .5rem;
+            overflow: hidden;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+        }
+        [data-bs-theme="dark"] .project-card:hover {
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .25) !important;
+        }
+        .project-image-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+        .project-image-wrapper img {
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover .project-image-wrapper img {
+            transform: scale(1.05);
+        }
+        .project-status {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: .35em .65em;
+            font-size: .75em;
+            font-weight: 700;
+            border-radius: .375rem;
+        }
     </style>
 
     <script type="application/ld+json">
@@ -401,6 +436,7 @@
                         <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
                         <li class="nav-item"><a class="nav-link" href="#timeline">Sejarah</a></li>
                         <li class="nav-item"><a class="nav-link" href="#team">Tim</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Proyek</a></li>
                         <li class="nav-item"><a class="nav-link" href="#services">Layanan</a></li>
                         <li class="nav-item"><a class="nav-link" href="#testimonials">Testimoni</a></li>
                         <li class="nav-item"><a class="nav-link" href="#clients">Klien</a></li>
@@ -566,7 +602,64 @@
                 </div>
             </div>
         </section>
-        
+
+        <section id="projects" class="py-5">
+            <div class="container py-5" data-aos="fade-up">
+                <div class="text-center mb-5">
+                    <p class="section-kicker">PORTOFOLIO KAMI</p>
+                    <h2 class="h1 fw-bold text-secondary">Proyek Unggulan</h2>
+                    <p class="lead col-lg-8 mx-auto">Berikut adalah beberapa proyek yang telah dan sedang kami kerjakan, menunjukkan komitmen kami dalam memberikan solusi terbaik.</p>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card project-card h-100 shadow-sm">
+                            <div class="project-image-wrapper">
+                                <img src="https://rng.my.id/img/img-2.jpg" class="card-img-top" alt="Proyek Pengembangan Wisata Alam">
+                                <span class="project-status bg-success">Selesai</span>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold">Pengembangan Wisata Alam Pantai Kapal</h5>
+                                <p class="card-text small text-muted mb-2">Mitra: PT. Nungan Java Lestari & BBKSDA Jawa Timur</p>
+                                <p class="card-text small flex-grow-1">Kerja sama strategis dalam pengelolaan dan pengembangan wisata alam yang berkelanjutan, menyelaraskan aspek konservasi dan pemberdayaan ekonomi lokal.</p>
+                                <a href="#" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card project-card h-100 shadow-sm">
+                             <div class="project-image-wrapper">
+                                <img src="https://rng.my.id/img/img-6.jpg" class="card-img-top" alt="Proyek Perizinan Pertambangan">
+                                 <span class="project-status bg-warning text-dark">Dalam Pengerjaan</span>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold">Pendampingan Perizinan UKL-UPL Pertambangan</h5>
+                                <p class="card-text small text-muted mb-2">Klien: PT Energi Jaya Perkasa</p>
+                                <p class="card-text small flex-grow-1">Memberikan pendampingan penuh untuk pengurusan izin lingkungan UKL-UPL, memastikan kepatuhan terhadap regulasi dan kelancaran proses operasional klien.</p>
+                                 <a href="#" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card project-card h-100 shadow-sm">
+                             <div class="project-image-wrapper">
+                                <img src="https://rng.my.id/img/img-5.jpg" class="card-img-top" alt="Proyek Rehabilitasi DAS">
+                                <span class="project-status bg-success">Selesai</span>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-bold">Rehabilitasi Daerah Aliran Sungai (DAS)</h5>
+                                <p class="card-text small text-muted mb-2">Mitra: Yayasan Hutan Lestari</p>
+                                <p class="card-text small flex-grow-1">Implementasi program rehabilitasi DAS melalui penanaman kembali dan pembuatan bangunan konservasi tanah untuk memulihkan fungsi ekologis kawasan.</p>
+                                 <a href="#" class="btn btn-outline-primary btn-sm mt-auto align-self-start">Lihat Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="services" class="py-5 bg-light-green">
             <div class="container py-5" data-aos="fade-up">
                 <div class="text-center mb-5">
