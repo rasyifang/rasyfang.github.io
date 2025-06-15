@@ -81,7 +81,7 @@ body {
     max-width: 850px;    /* Batas lebar agar tidak terlalu melebar di layar besar */
     margin-left: auto;   /* Menengahkan tagline jika lebarnya dibatasi */
     margin-right: auto;
-    margin-bottom: 2rem; /* Jarak ke tombol di bawahnya */
+    margin-bottom: 7rem; /* Jarak ke tombol di bawahnya */
 }
 
 
