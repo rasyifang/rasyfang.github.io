@@ -349,3 +349,15 @@ footer a:hover { color: #fff; }
     object-fit: cover;  /* Ini adalah bagian terpenting! */
     object-position: center; 
 }
+
+/* -- Penyesuaian Responsif untuk Hero Section -- */
+@media (max-width: 767.98px) {
+    .hero-title {
+        font-size: 2.25rem; /* Mengecilkan font dari 'display-4' ke ukuran yang lebih pas di mobile */
+        line-height: 1.3;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem; /* Menyesuaikan ukuran font subjudul */
+    }
+}
