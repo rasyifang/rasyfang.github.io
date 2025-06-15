@@ -416,25 +416,43 @@ footer a:hover { color: #fff; }
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .25);
 }
 
-/* -- Penyesuaian untuk Tab Tim -- */
+/* -- Penyesuaian Modern untuk Tab Tim -- */
+.nav-tabs {
+    border-bottom-color: var(--bs-border-color);
+}
+
+.nav-tabs .nav-link {
+    font-weight: 600;
+    color: var(--bs-body-color);
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom-width: 2px;
+}
+
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+    border-color: transparent; /* Menghindari border default saat hover */
+    color: var(--bs-primary);
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    color: var(--bs-primary);
+    background-color: var(--bs-tertiary-bg);
+    border-color: var(--bs-border-color) var(--bs-border-color) var(--bs-tertiary-bg);
+}
+
 .team-tab-content {
     background-color: var(--bs-tertiary-bg);
     border: 1px solid var(--bs-border-color);
-    border-radius: .5rem;
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
-    transition: background-color .3s, border-color .3s;
+    border-top: none; /* Ini adalah kunci untuk menyatukan tab dengan konten */
+    border-radius: 0 0 .5rem .5rem; /* Hanya sudut bawah yang melengkung */
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
 }
 
-.nav-pills .nav-link {
-    color: var(--bs-body-color);
-    font-weight: 600;
+/* Menyesuaikan padding untuk konten di dalam tab agar tidak terlalu mepet */
+.team-tab-content > .tab-pane > div {
+    padding: 2rem;
 }
-
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    background-color: var(--bs-primary);
-    color: #fff;
-}
-
 /* -- Penyesuaian untuk Accordion Proyek -- */
 .accordion-button {
     color: var(--bs-secondary);
