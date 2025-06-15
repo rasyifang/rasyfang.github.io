@@ -24,7 +24,14 @@
     --bs-dark: #0f172a; /* Slate 900 */
 }
 
-html, body { overflow-x: hidden; width: 100%; }
+/*
+ * The rule 'overflow-x: hidden' was removed from here
+ * as it prevents 'position: sticky' from working correctly.
+*/
+html, body { 
+    width: 100%; 
+}
+
 body { 
     font-family: 'Inter', sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
