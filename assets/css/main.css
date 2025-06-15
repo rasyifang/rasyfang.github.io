@@ -273,33 +273,44 @@ footer a:hover { color: #fff; }
 
 /* -- Kode Logo Klien (Diperbarui) -- */
 .clients-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     justify-content: center;
     align-items: center;
-    gap: 2.5rem;
+    gap: 2.5rem 2rem;
 }
+
+.client-item {
+    text-align: center;
+}
+
 .client-logo {
-    height: 50px; /* Sedikit lebih besar */
-    max-width: 160px;
-    filter: grayscale(100%);
-    opacity: 0.6;
+    height: 60px;
+    max-width: 150px;
+    object-fit: contain; /* Menjaga rasio aspek logo */
+    opacity: 0.9;
     transition: all 0.3s ease-in-out;
 }
+
 .client-logo:hover {
-    filter: grayscale(0%);
     opacity: 1;
     transform: scale(1.1);
 }
-[data-bs-theme="dark"] .client-logo {
-    filter: brightness(0) invert(1);
-    opacity: 0.7;
-}
-[data-bs-theme="dark"] .client-logo:hover {
-    filter: none;
-    opacity: 1;
+
+.client-name {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--bs-body-color);
 }
 
+/* Menghapus filter spesifik dark mode */
+[data-bs-theme="dark"] .client-logo {
+    opacity: 0.8;
+}
+[data-bs-theme="dark"] .client-logo:hover {
+    opacity: 1;
+}
 /* -- Kode untuk Daftar Proyek -- */
 .project-list-container {
     background-color: var(--bs-tertiary-bg);
@@ -360,4 +371,47 @@ footer a:hover { color: #fff; }
     .hero-subtitle {
         font-size: 1.1rem; /* Menyesuaikan ukuran font subjudul */
     }
+}
+/* -- Kode untuk Kartu Galeri dengan Deskripsi -- */
+.gallery-card {
+    background-color: var(--bs-tertiary-bg);
+    border-radius: .375rem; /* Sedikit lebih membulat */
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Penting agar gambar mengikuti sudut melengkung */
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+.gallery-card .gallery-item img {
+    transition: transform .3s ease;
+}
+
+.gallery-card:hover .gallery-item img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: auto; /* Mendorong caption ke bawah jika ada perbedaan tinggi */
+}
+
+/* Menghapus transisi lama agar tidak konflik */
+.gallery-item {
+    transition: none;
+}
+.gallery-item:hover {
+    transform: none;
+}
+
+[data-bs-theme="dark"] .gallery-card:hover {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .25);
 }
