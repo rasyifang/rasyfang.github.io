@@ -59,7 +59,7 @@ body {
 }
 
 .hero-bg {
-    background-image: linear-gradient(to top, rgba(5, 46, 22, 0.9), rgba(5, 46, 22, 0.3)), url('https://rng.my.id/img/lap/bg-hero-1.webp');
+    background-image: linear-gradient(to top, rgba(5, 46, 22, 0.1), rgba(5, 46, 22, 0.3)), url('https://rng.my.id/img/lap/bg-hero-1.webp');
     background-size: cover;
     background-position: center;
     min-height: 80vh;
