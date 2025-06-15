@@ -363,12 +363,24 @@
             </div>
         </section>
         
-        <section id="gallery" class="py-5">
-            <div class="container py-5" data-aos="fade-up">
-                <div class="text-center mb-5">
-                    <p class="section-kicker">Dokumentasi Proyek</p>
-                    <h2 class="h1 fw-bold text-secondary">Galeri Kami</h2>
-                </div>
+       <section id="gallery" class="py-5">
+    <div class="container py-5" data-aos="fade-up">
+        <div class="text-center mb-5">
+            <p class="section-kicker">Dokumentasi Proyek</p>
+            <h2 class="h1 fw-bold text-secondary">Galeri Kami</h2>
+        </div>
+
+        <ul class="nav nav-tabs justify-content-center border-bottom-0 mb-5" id="galleryTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="featured-tab" data-bs-toggle="tab" data-bs-target="#featured-pane" type="button" role="tab" aria-controls="featured-pane" aria-selected="true">Proyek Unggulan</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="new-gallery-tab" data-bs-toggle="tab" data-bs-target="#new-gallery-pane" type="button" role="tab" aria-controls="new-gallery-pane" aria-selected="false">Kegiatan</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="galleryTabContent">
+            <div class="tab-pane fade show active" id="featured-pane" role="tabpanel" aria-labelledby="featured-tab" tabindex="0">
                 <div class="row g-4 mb-5">
                     <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
                         <a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/gallery-1.jpg">
@@ -392,39 +404,31 @@
                     </div>
                 </div>
                 <div class="gallery-slider">
-                    <div>
-                        <a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-1.jpg">
-                            <img src="https://rng.my.id/img/img-1.jpg" alt="Diskusi tim di lapangan" loading="lazy">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-2.jpg">
-                            <img src="https://rng.my.id/img/img-2.jpg" alt="Penggunaan drone untuk pemetaan area" loading="lazy">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-3.jpg">
-                            <img src="https://rng.my.id/img/img-3.jpg" alt="Peralatan berat di lokasi proyek tambang" loading="lazy">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-4.jpg">
-                            <img src="https://rng.my.id/img/img-4.jpg" alt="Bibit tanaman untuk program rehabilitasi DAS" loading="lazy">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-5.jpg">
-                            <img src="https://rng.my.id/img/img-5.jpg" alt="Instalasi untuk pengeboran air tanah" loading="lazy">
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-6.jpg">
-                            <img src="https://rng.my.id/img/img-6.jpg" alt="Sosialisasi program perhutanan sosial dengan masyarakat" loading="lazy">
-                        </a>
-                    </div>
+                    <div><a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-1.jpg"><img src="https://rng.my.id/img/img-1.jpg" alt="Diskusi tim di lapangan" loading="lazy"></a></div>
+                    <div><a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-2.jpg"><img src="https://rng.my.id/img/img-2.jpg" alt="Penggunaan drone untuk pemetaan area" loading="lazy"></a></div>
+                    <div><a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-3.jpg"><img src="https://rng.my.id/img/img-3.jpg" alt="Peralatan berat di lokasi proyek tambang" loading="lazy"></a></div>
+                    <div><a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-4.jpg"><img src="https://rng.my.id/img/img-4.jpg" alt="Bibit tanaman untuk program rehabilitasi DAS" loading="lazy"></a></div>
+                    <div><a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-5.jpg"><img src="https://rng.my.id/img/img-5.jpg" alt="Instalasi untuk pengeboran air tanah" loading="lazy"></a></div>
+                    <div><a href="#" class="slide-image-wrapper shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/img-6.jpg"><img src="https://rng.my.id/img/img-6.jpg" alt="Sosialisasi program perhutanan sosial dengan masyarakat" loading="lazy"></a></div>
                 </div> 
-            </div> 
-        </section>
+            </div>
+
+            <div class="tab-pane fade" id="new-gallery-pane" role="tabpanel" aria-labelledby="new-gallery-tab" tabindex="0">
+                <div class="row g-4">
+                    <div class="col-6 col-md-4"><a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/lap/img1.jpeg"><img src="https://rng.my.id/img/lap/img1.jpeg" class="img-fluid w-100" alt="Deskripsi foto baru 1" loading="lazy"></a></div>
+                    <div class="col-6 col-md-4"><a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/lap/img2.jpeg"><img src="https://rng.my.id/img/lap/img2.jpeg" class="img-fluid w-100" alt="Deskripsi foto baru 2" loading="lazy"></a></div>
+                    <div class="col-6 col-md-4"><a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/lap/img3.jpeg"><img src="https://rng.my.id/img/lap/img3.jpeg" class="img-fluid w-100" alt="Deskripsi foto baru 3" loading="lazy"></a></div>
+                    <div class="col-6 col-md-4"><a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/lap/img4.jpeg"><img src="https://rng.my.id/img/lap/img4.jpeg" class="img-fluid w-100" alt="Deskripsi foto baru 4" loading="lazy"></a></div>
+                    <div class="col-6 col-md-4"><a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/lap/img5.jpeg"><img src="https://rng.my.id/img/lap/img5.jpeg" class="img-fluid w-100" alt="Deskripsi foto baru 5" loading="lazy"></a></div>
+                    <div class="col-6 col-md-4"><a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/lap/img6.jpeg"><img src="https://rng.my.id/img/lap/img6.jpeg" class="img-fluid w-100" alt="Deskripsi foto baru 6" loading="lazy"></a></div>
+                    <div class="col-6 col-md-4"><a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/lap/img7.jpeg"><img src="https://rng.my.id/img/lap/img7.jpeg" class="img-fluid w-100" alt="Deskripsi foto baru 7" loading="lazy"></a></div>
+                    <div class="col-6 col-md-4"><a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/lap/img8.jpeg"><img src="https://rng.my.id/img/lap/img8.jpeg" class="img-fluid w-100" alt="Deskripsi foto baru 8" loading="lazy"></a></div>
+                    <div class="col-6 col-md-4"><a href="#" class="gallery-item d-block shadow-sm" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://rng.my.id/img/lap/img9.jpeg"><img src="https://rng.my.id/img/lap/img9.jpeg" class="img-fluid w-100" alt="Deskripsi foto baru 9" loading="lazy"></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section id="cta" class="py-5">
             <div class="container py-5" data-aos="fade-up">
