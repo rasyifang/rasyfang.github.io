@@ -45,7 +45,7 @@ body {
 [data-bs-theme="dark"] .form-control:focus { background-color: #475569; color: #f1f5f9; border-color: var(--bs-primary); box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);}
 [data-bs-theme="dark"] footer { background-color: var(--bs-dark) !important; }
 [data-bs-theme="dark"] #map-container { border-color: rgba(255, 255, 255, 0.2); }
-[data-bs-theme="dark"] .hero-bg { background-image: linear-gradient(to top,rgba(15, 23, 42, .9),rgba(15, 23, 42, .3)),url(https://rng.my.id/img/lap/bg-hero.webp); }
+[data-bs-theme="dark"] .hero-bg { background-image: linear-gradient(to top,rgba(15, 23, 42, .9),rgba(15, 23, 42, .3)),url(https://rng.my.id/img/lap/bg-hero-1.webp); }
 
 .btn-primary {
     --bs-btn-bg: var(--bs-primary);
@@ -59,7 +59,7 @@ body {
 }
 
 .hero-bg {
-    background-image: linear-gradient(to top, rgba(5, 46, 22, 0.9), rgba(5, 46, 22, 0.3)), url('https://rng.my.id/img/lap/bg-hero.webp');
+    background-image: linear-gradient(to top, rgba(5, 46, 22, 0.9), rgba(5, 46, 22, 0.3)), url('https://rng.my.id/img/lap/bg-hero-1.webp');
     background-size: cover;
     background-position: center;
     min-height: 80vh;
