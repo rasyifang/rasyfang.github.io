@@ -71,7 +71,7 @@ body {
     font-weight: 700;     /* Ketebalan font (bold) */
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    margin-bottom: 1rem; /* Jarak ke tagline di bawahnya */
+    margin-bottom: 2rem; /* Jarak ke tagline di bawahnya */
 }
 
 .hero-tagline {
@@ -93,7 +93,8 @@ body {
     }
 
     .hero-tagline {
-        font-size: 1.1rem; /* Ukuran tagline yang lebih kecil untuk mobile */
+        font-size: 1.1rem;
+		margin-bottom: 7rem;		/* Ukuran tagline yang lebih kecil untuk mobile */
     }
 }
 .section-kicker { font-weight: 600; color: var(--bs-primary); text-transform: uppercase; letter-spacing: .05em; }
