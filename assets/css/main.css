@@ -415,3 +415,50 @@ footer a:hover { color: #fff; }
 [data-bs-theme="dark"] .gallery-card:hover {
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .25);
 }
+
+/* -- Penyesuaian untuk Tab Tim -- */
+.team-tab-content {
+    background-color: var(--bs-tertiary-bg);
+    border: 1px solid var(--bs-border-color);
+    border-radius: .5rem;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    transition: background-color .3s, border-color .3s;
+}
+
+.nav-pills .nav-link {
+    color: var(--bs-body-color);
+    font-weight: 600;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: var(--bs-primary);
+    color: #fff;
+}
+
+/* -- Penyesuaian untuk Accordion Proyek -- */
+.accordion-button {
+    color: var(--bs-secondary);
+    background-color: var(--bs-tertiary-bg);
+}
+
+[data-bs-theme="dark"] .accordion-button {
+     color: var(--bs-secondary);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--bs-light-green-bg);
+    color: var(--bs-primary);
+    box-shadow: inset 0 -1px 0 var(--bs-border-color);
+}
+
+.accordion-item {
+    background-color: var(--bs-tertiary-bg);
+    border: 1px solid var(--bs-border-color);
+}
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+    border-color: var(--bs-primary);
+}
+.accordion-body {
+    background-color: var(--bs-tertiary-bg);
+}
